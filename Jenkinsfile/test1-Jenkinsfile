@@ -8,6 +8,7 @@ pipeline {
                     checkout scm
                     sh 'rm -rf .git'
                     echo "Running the Deployment script"
+                    sh "sudo cp /var/lib/jenkins/workspace/${JOB_NAME}/index.html /var/www/html/"
             }
         }
     }
