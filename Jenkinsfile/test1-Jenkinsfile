@@ -3,7 +3,7 @@ pipeline {
     options { skipDefaultCheckout() }
     stages{
         stage ('Running on rqi1stop-dev cron environment') {
-            agent {label 'slave1'}
+            agent {label 'ibm-dev-slave'}
                 steps{
                     checkout scm
                     sh 'rm -rf .git'
